@@ -1,4 +1,4 @@
-# Employee Performance & Recruitment Risk Dashboard
+# Workforce Performance & Recruitment Risk Dashboard
 
 > **Software Engineering for Data Scientists**
 
@@ -207,51 +207,21 @@ flowchart TD
 
 ## Repository Structure
 
+```text
+workforce-risk-dashboard/
+├── .github/workflows/        # CI workflows (test, tests, lint)
+├── assets/                   # Model and stylesheet assets
+├── python-package/           # Core employee_events package and setup.py
+├── report/                   # Dashboard components, dashboard.py, and utils
+├── src/                      # Starter reference modules & helper scripts
+├── tests/                    # Pytest test suite
+├── .gitignore                # Git ignore rules
+├── CODEOWNERS                # Repository code ownership rules
+├── LICENSE.txt               # MIT License
+├── employee_dashboard_report # Project report
+├── requirements.txt          # Project dependencies
+└── README.md                 # Project documentation
 ```
-workforce-risk-performance-dashboard/
-├── .github/
-│   └── workflows/
-│       ├── test.yml                # CI: original Udacity test workflow
-│       ├── tests.yml               # CI: run pytest via requirements.txt
-│       └── lint.yml                # CI: flake8 linting on push to main
-│
-├── assets/
-│   ├── model.pkl                   # Pre-trained LogisticRegression model
-│   └── report.css                  # Dashboard stylesheet
-│
-├── python-package/
-│   ├── employee_events/
-│   │   ├── __init__.py             # Exports Employee, Team, QueryBase
-│   │   ├── sql_execution.py        # QueryMixin + db_path + query decorator
-│   │   ├── query_base.py           # QueryBase: event_counts, notes, names
-│   │   ├── employee.py             # Employee subclass + SQL queries 3 & 4
-│   │   ├── team.py                 # Team subclass + SQL queries 5 & 6
-│   │   ├── employee_events.db      # SQLite database (bundled in package)
-│   │   └── requirements.txt        # Package-level dependencies
-│   └── setup.py                    # Package build config; creates dist/ .tar.gz
-│
-├── report/
-│   ├── base_components/
-│   │   ├── __init__.py
-│   │   ├── base_component.py       # BaseComponent abstract class
-│   │   ├── dropdown.py             # Dropdown component
-│   │   ├── radio.py                # Radio button component
-│   │   ├── matplotlib_viz.py       # MatplotlibViz + base64 PNG encoding
-│   │   └── data_table.py           # DataTable component
-│   ├── combined_components/
-│   │   ├── __init__.py
-│   │   ├── combined_component.py   # CombinedComponent page assembler
-│   │   └── form_group.py           # FormGroup with submit button
-│   ├── dashboard.py                # Main app: all subclasses + routes
-│   └── utils.py                    # load_model() + pathlib path variables
-│
-├── tests/
-│   └── test_employee_events.py     # pytest: 5 database integrity tests
-│
-├── requirements.txt                # All dependencies (includes ./python-package)
-└── README.md                       # This file
-```
-
 ---
 
 ## Database Schema
@@ -429,8 +399,8 @@ pred = risk.mean()
 Fork the repository from GitHub, then clone your fork:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/workforce-risk-performance-dashboard.git
-cd workforce-risk-performance-dashboard
+git clone https://github.com/eaamankwah/workforce-risk-dashboard.git
+cd workforce-risk-dashboard
 ```
 
 > Replace `YOUR_USERNAME` with your actual GitHub username.
@@ -628,6 +598,8 @@ from employee_events import Employee, Team, QueryBase
 | `model_data` | `(self, id: int)` | `pd.DataFrame` — one row per team member |
 
 ---
+
+A full write-up of the methodology, results framing, business value, and limitations is available in [Workforce Risk Dashboard Report](./employee_dashboard_report.pdf)
 
 ## Technologies
 
