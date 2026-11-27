@@ -7,7 +7,7 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.2-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://sqlite.org)
 [![pytest](https://img.shields.io/badge/pytest-5%20passing-2ecc71?style=flat-square&logo=pytest&logoColor=white)](https://pytest.org)
-[![Run Tests](https://github.com/eaamankwah/workforce-risk-dashboard/actions/workflows/tests.yml/badge.svg)](https://github.com/eaamankwah/workforce-risk-dashboard/actions/workflows/tests.yml)
+[![Run Tests](https://github.com/eaamankwah/workforce-risk-dashboard/actions/workflows/test.yml/badge.svg)](https://github.com/eaamankwah/workforce-risk-dashboard/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE.txt)
 
 ---
